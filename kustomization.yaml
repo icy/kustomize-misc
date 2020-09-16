@@ -1,9 +1,0 @@
-resources:
-- current.yaml
-
-patches:
-
-- path: p_deployment_nodeSelector_ops.json
-  target:
-    kind: Deployment
-    namespace: non-existent-namespace
