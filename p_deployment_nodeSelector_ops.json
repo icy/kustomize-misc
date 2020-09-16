@@ -1,0 +1,7 @@
+[
+  {
+    "op": "replace",
+    "path": "/spec/template/spec/nodeSelector/mine~1group",
+    "value": "default"
+  }
+]
