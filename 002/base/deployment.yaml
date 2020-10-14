@@ -1,0 +1,20 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: bflux
+  namespace: flux
+  labels:
+    app: bflux
+spec:
+  template:
+    metadata:
+      labels:
+        app: bflux
+      annotations:
+        fluentbit.io/exclude: "true"
+    spec:
+      containers:
+      - name: bflux
+        image: bflux
+        imagePullPolicy: Always

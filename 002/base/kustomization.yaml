@@ -1,0 +1,7 @@
+resources:
+- deployment.yaml
+
+images:
+- name: bflux
+  newName: devops
+  newTag: bflux-v1.8.128

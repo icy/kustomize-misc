@@ -1,0 +1,17 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: bflux
+  namespace: flux
+spec:
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: foo/bar
+    spec:
+      containers:
+      - name: bflux
+        env:
+        - name: PROJECT_NAME
+          value: "incubator"
