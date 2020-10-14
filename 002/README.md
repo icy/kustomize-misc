@@ -63,7 +63,7 @@ $ kust385 version
 
 ## Updates
 
-Actually it isn't a problem if the `images:` transformer.
+Actually it isn't a problem of the `images:` transformer.
 When I remove the transformer from `base`/ I can see the same diff
 
 ```
