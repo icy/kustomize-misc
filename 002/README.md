@@ -3,7 +3,8 @@
 In `kustomize-3.8.5` an overlay patch can interfere with `images:`
 transformer in `base` and generate completely wrong output.
 
-In our test, `base/kustomization.yaml` specifies a transformer
+In our test (https://github.com/icy/kustomize-misc/tree/master/002),
+`base/kustomization.yaml` specifies a transformer
 
 ```
 images:
