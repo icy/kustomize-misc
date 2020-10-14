@@ -18,3 +18,9 @@ spec:
       - name: bflux
         image: bflux
         imagePullPolicy: Always
+        envs:
+        - name: FOO
+          value: BAR
+        args:
+        - foo-base
+        - bar-base

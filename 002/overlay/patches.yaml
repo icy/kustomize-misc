@@ -15,3 +15,6 @@ spec:
         env:
         - name: PROJECT_NAME
           value: "incubator"
+        args:
+        - foo
+        - bar
