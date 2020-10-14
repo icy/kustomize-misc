@@ -44,3 +44,8 @@ $ diff <(kust382 build base/) <(kust385 build overlay/)
 >         - name: PROJECT_NAME
 >           value: incubator
 ```
+
+## References
+
+- [ ] https://github.com/kubernetes-sigs/kustomize/issues/2758#issuecomment-664655547
+- [ ] https://github.com/kubernetes-sigs/kustomize/pull/2931
