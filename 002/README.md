@@ -53,3 +53,28 @@ $ colordiff <(kust382 build overlay/) <(kust385 build overlay/)
 
 - [ ] https://github.com/kubernetes-sigs/kustomize/issues/2758#issuecomment-664655547
 - [ ] https://github.com/kubernetes-sigs/kustomize/pull/2931
+
+## Platform
+
+```
+$ kust385 version
+{Version:kustomize/v3.8.5 GitCommit:4052cd4fd8c76a17b5f64e32509f3fba9713fe75 BuildDate:2020-10-08T02:45:59Z GoOs:linux GoArch:amd64}
+```
+
+## Updates
+
+Actually it isn't a problem if the `images:` transformer.
+When I remove the transformer from `base`/ I can see the same diff
+
+```
+$ colordiff <(kust382 build overlay/) <(kust385 build overlay/)
+22,23d21
+<         - name: FOO
+<           value: BAR
+26,27d23
+<         image: bflux
+<         imagePullPolicy: Always
+```
+
+I suspect that the behavior of `patches` has changed quite a lot,
+and that doesn't merge: it replaces things from `base/`
